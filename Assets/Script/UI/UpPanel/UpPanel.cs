@@ -2,16 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace test_task
 {
     public class UpPanel : MonoBehaviour
     {
         [SerializeField] private GameObject viewBttn = null;
-        private int coun_Actions = 5;
+        [SerializeField] private Color32 chackColor = Color.black;
+         private int coun_Actions = 5;
         private GameObject[] upButtons;
 
-        void Start()
+        private void Awake()
         {
             upButtons = new GameObject[coun_Actions];
             CreatePanel();
@@ -31,6 +33,18 @@ namespace test_task
                 dx += d;
                 upButtons[i] = bttn;
             }
+        }
+        public void Reset()
+        {
+            for(int i=0;i<coun_Actions; i++)
+            {
+                upButtons[i].GetComponent<UpBttn>().img.color = Color.white;
+            }
+        }
+
+        public void Check(int id)
+        {
+            upButtons[id].GetComponent<UpBttn>().img.color = chackColor;
         }
 
     }

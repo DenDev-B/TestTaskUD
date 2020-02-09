@@ -60,7 +60,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Map\Cell.cs" />
     <Compile Include="Assets\Script\Map\Map.cs" />
+    <Compile Include="Assets\Script\SceneClick.cs" />
+    <Compile Include="Assets\Script\UI\UpPanel\UpBttn.cs" />
     <Compile Include="Assets\Script\UI\UpPanel\UpPanel.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Unity/TestTaskUD/TestTaskUD/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
